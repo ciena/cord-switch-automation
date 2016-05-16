@@ -1,0 +1,16 @@
+---
+ -  hosts: switches
+    tasks:
+      - name: touch a file
+	file: path=/root/iwashere.conf state=touch
+	register: touched_config
+
+      - name: touch ANOTHER file
+	file: path=/root/iwasalsohere.conf state=touch
+	when: touched_config|success
+	notify: 
+	 - Start notified
+
+  handlers:
+      - name: Start notified
+	file: path=/root/notified state=touch

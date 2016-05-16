@@ -1,0 +1,12 @@
+[switches]
+10.6.0.6
+10.6.0.7
+10.6.0.8
+10.6.0.10
+
+[switches:vars]
+ansible_ssh_user=root
+
+
+
+
