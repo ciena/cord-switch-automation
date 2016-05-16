@@ -1,0 +1,1 @@
+# cord-switch-automation
